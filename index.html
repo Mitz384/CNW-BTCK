@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiki</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="d-flex align-items-center bg-white">
+    <div class="d-flex align-items-center bg-white ms-auto me-auto">  
+      <div class="logo-container">
+        <a href="./tiki.html"><img src="./pic/logo.png" alt="" class="logo"/></a>
+      </div>
+
+      <!-- Search -->
+      <div class="search-container d-flex align-items-center border border-solid border-1 border-secondary-emphasis rounded">
+        <!-- Search icon -->
+        <img src="./pic/search_icon.png" class="icon-20px" alt="" />
+
+        <!-- Search input -->
+        <div class="search-input-container d-flex align-items-center border-end border-solid border-1 border-secondary-emphasis">
+          <input type="text" class="border-0 w-100 h-100 d-flex align-items-center" placeholder="Freeship đến 30K"/>
+        </div>
+
+        <!-- Search button -->
+        <div class="search-btn-container d-flex justify-content-center align-items-center">
+          <button class="border-0  text-primary d-flex justify-content-center align-items-center bg-white fs-14px">Tìm kiếm</button>
+        </div>
+      </div>
+
+      <!-- Home -->
+      <div class="d-flex align-items-center home-container">
+        <a href="" class="d-flex align-items-center text-decoration-none">
+          <img src="./pic/home.png" alt="" class="icon-24px"/>
+          <p class="fs-14px m-0 ms-1 text-secondary">Trang chủ</p>
+        </a>
+      </div>
+
+      <!-- Account -->
+      <div class="d-flex align-items-center account-container">
+        <a href="" class="d-flex align-items-center text-decoration-none">
+          <img src="./pic/acc.png" alt="" class="icon-24px"/>
+          <p class="fs-14px m-0 ms-1 text-secondary">Tài khoản</p>
+        </a>
+      </div>
+
+      <!-- Line -->
+      <div class="line"></div>
+
+      <!-- Cart -->
+      <div class="cart-container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+          <img src="./pic/cart.png" alt="" class="cart-icon"/>
+          <span class="text-white rounded-circle position-absolute fs-10px fw-bold">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Đường dẫn -->
+  <section class="d-flex align-items-center current-section">
+    <div class="current-container position-relative d-flex align-items-center gap-1">
+      <a class="fs-14px text-decoration-none fw-light" href="">Trang chủ</a>
+      <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.08254 0.779809C1.27781 0.584546 1.59439 0.584546 1.78965 0.779809L6.78965 5.77981C6.98492 5.97507 6.98492 6.29165 6.78965 6.48691L1.78965 11.487C1.59439 11.6822 1.27781 11.6822 1.08254 11.487C0.88728 11.2917 0.88728 10.9751 1.08254 10.7798L5.72899 6.13336L1.08254 1.48691C0.88728 1.29165 0.88728 0.975071 1.08254 0.779809Z" fill="#808089"/>
+      </svg>
+      <a class="fs-14px fw-normal text-decoration-none" href="">Nhà sách Tiki</a>      
+    </div>
+  </section>
+  <!-- Main -->
+  <main>
+    <div class="main-container d-flex justify-content-center" style="gap: 14px;">
+      <!-- Bộ lọc sản phẩm -->
+      <section class="d-flex">
+        <div class="filter-container position-relative d-flex flex-column bg-white">
+          <!-- Danh mục sản phẩm -->
+          <ul class="d-flex flex-column p-0">
+            <li><h5 class="fs-14px fw-medium">Danh mục sản phẩm</h5></li>
+            <li class="fs-12px"><a class="text-decoration-none text-38383d" href="">English books</a></li>
+            <li class="fs-12px"><a class="text-decoration-none text-38383d" href="">Sách tiếng việt</a></li>
+            <li class="fs-12px"><a class="text-decoration-none text-38383d" href="">Văn phòng phẩm</a></li>
+            <li class="fs-12px"><a class="text-decoration-none text-38383d" href="">Quà lưu niệm</a></li>
+          </ul>
+          <!-- Nhà cung cấp -->
+          <ul class="d-flex flex-column p-0">
+            <li><h5 class="fs-14px fw-medium">Nhà cung cấp</h5></li>
+            <li class="d-flex align-items-center"><input type="checkbox" id="Fahasa">
+                <label for="Fahasa" class="fs-12px">Nhà sách Fahasa</label>
+            </li>
+            <li class="d-flex align-items-center"><input type="checkbox" id="Bamboo">
+                <label for="Bamboo" class="fs-12px">Bamboo Books</label>
+            </li>
+            <li class="d-flex align-items-center"><input type="checkbox" id="Time">
+                <label for="Time" class="fs-12px">Time Books</label>
+            </li>
+            <li class="d-flex align-items-center"><input type="checkbox" id="NSTOnline">
+                <label for="NSTOnline" class="fs-12px">Nhà Sách Trẻ Online</label>
+            </li>
+            <li class="d-flex align-items-center"><input type="checkbox" id="VBooks">
+                <label for="VBooks" class="fs-12px">VBooks</label>
+            </li>
+            <li>
+              <a class="text-decoration-none d-flex align-items-center gap-1 position-relative" href="" href="">
+                <p class="text-primary fs-12px">Xem thêm</p>
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.86389 3.70957L7.84045 0.730664C8.06077 0.510352 8.41702 0.510352 8.63498 0.730664C8.85295 0.950977 8.85295 1.30723 8.63498 1.52754L5.26233 4.90254C5.04905 5.11582 4.70686 5.12051 4.48655 4.91895L1.09045 1.52988C0.980298 1.41973 0.926392 1.27441 0.926392 1.13145C0.926392 0.988477 0.980298 0.843164 1.09045 0.733008C1.31077 0.512695 1.66702 0.512695 1.88499 0.733008L4.86389 3.70957Z" fill="#0B74E5"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <!-- Đánh giá -->
+          <ul class="d-flex flex-column p-0">
+            <li><h5 class="fs-14px fw-medium">Đánh giá</h5></li>
+            <li class="d-flex align-items-center" style="gap: 3px;">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <span>từ 5 sao</span></li>
+            <li class="d-flex align-items-center" style="gap: 3px;"><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill star-gray"></i>
+                <span>từ 4 sao</span></li>
+            <li class="d-flex align-items-center" style="gap: 3px;"><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill star-gray"></i>
+                <i class="bi bi-star-fill star-gray"></i>
+                <span>từ 3 sao</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Danh sách sản phẩm -->
+      <section class="d-flex position-relative d-flex flex-column" style="gap: 162px; margin-bottom: 53px;">
+        <!-- Sản phẩm -->
+        <div class="list-container position-relative d-flex flex-column">
+          <!-- Hàng 1 -->
+          <div class="position-relative d-flex" style="gap: 8px">
+            <div class="product-card bg-white d-flex flex-column position-relative">
+            <div class="prod-image">
+              <img src="./pic/prod1.png" alt="">
+            </div>
+            <div class="prod-description d-flex flex-column justify-content-between">
+              <div class="prod-info">
+                <div class="name-rating">
+                  <p class="fs-12px text-27272A">Bản đồ (Bản đồ thông thường)</p>
+                  <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                    <div class="d-flex align-items-center" style="gap: 2px;">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="d-flex align-items-center" style="gap: 3px;">
+                      <span class="fs-12px text-ebebf0"> | </span>
+                      <span class="fs-10px text-808089">Đã bán 5k+</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="price-container">
+                  <div class="d-flex align-items-center gap-2">
+                    <p class="fs-16px fw-medium position-relative">257.000<span class="superscript fw-medium">đ</span></p>
+                    <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-26%</div>
+                  </div>                
+                </div>
+              </div>
+              <div class="delivery-container">
+                <div class="delivery-info d-flex align-items-center justify-content-center">
+                    <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod2.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Trend Following - Cách thức để kiếm được VẬN MAY LỚN và GIÀU CÓ trong các thị trường …</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 907</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">599.000<span class="superscript fw-medium">đ</span></p>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod3.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Sách - IELTS Writing Journey From Basics To Band 6.0</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-10px text-808089">Đã bán 21</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">142.560<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-28%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao chiều mai</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod4.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Sổ planner 52 tuần 2024 SDstationery “Treasure the Journey” gáy lò xo, họa tiết …</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 90</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">132.000<span class="superscript fw-medium">đ</span></p>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod5.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Lịch bàn 2024 Thông Thái Tinh Khôn SDstationery, 21x16x6 cm, dễ thương vui nhộn, minh …</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 109</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">73.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-17%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hàng 2 -->
+          <div class="position-relative d-flex" style="gap: 8px">
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod6.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Cây Cam Ngọt Của Tôi</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">72.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-33%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod7.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Vị Thần Của Những Quyết Định</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">57.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-28%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod8.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Không Phải Sói Nhưng Cũng Đừng Là Cừu -Tặng kèm bookmark 2 mặt</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">95.500<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-25%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod9.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Nóng Giận Là Bản Năng, Tĩnh Lặng Là Bản Lĩnh</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">55.500<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-38%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod10.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Thiên Tài Bên Trái, Kẻ Điên Bên Phải (Tái Bản)</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">118.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-34%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hàng 3 -->
+          <div class="position-relative d-flex" style="gap: 8px">
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod11.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info" style="padding: 4px 10px 0 10px;">
+                  <div class="sponsor-container">
+                    <div class="sponsor d-flex align-items-center justify-content-center rounded-pill fs-10px fw-bold">TÀI TRỢ</div>
+                  </div>
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Lịch bàn 2024 SDstationery From Yourself with Love, cảm hứng phát triển bản thân, tiến…</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 134</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">91.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-17%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod12.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info" style="padding: 4px 10px 0 10px;">
+                  <div class="sponsor-container">
+                    <div class="sponsor d-flex align-items-center justify-content-center rounded-pill fs-10px fw-bold">TÀI TRỢ</div>
+                  </div>
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Các phương pháp giao dịch 
+                      ngắn hạn hiệu quả trên thị trường Forex - Day Trading an…</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 2.3k</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">299.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-17%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod13.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">BỘ BOOKMARK 1% TINH HOA</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 3.1k</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">49.000<span class="superscript fw-medium">đ</span></p>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod14.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Nhà Giả Kim (Tái Bản 2020)</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">61.100<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-23%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod15.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Tâm Lý Học Hành Vi (Tặng Kèm 1 Bookmark )</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">67.100<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-32%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hàng 4 -->
+          <div class="position-relative d-flex" style="gap: 8px">
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod16.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Dear, Darling</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">62.900<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-29%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod17.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Xa Ngoài Kia Nơi Loài Tôm Hát - Where The Crawdads Sing</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 4.0k</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">131.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-21%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod18.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Điều Đẹp Nhất Có Khi Là Buông Tay (Tặng Kèm Bookmark)</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">49.200<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-32%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod19.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Một Thoáng Ta Rực Rỡ Ở Nhân Gian</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">100.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-26%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center justify-content-center">
+                      <p class="fs-12px fw-normal text-808089">Giao siêu tốc 2h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card bg-white d-flex flex-column position-relative">
+              <div class="prod-image">
+                <img src="./pic/prod20.png" alt="">
+              </div>
+              <div class="prod-description d-flex flex-column justify-content-between">
+                <div class="prod-info">
+                  <div class="name-rating">
+                    <p class="fs-12px text-27272A">Yêu Những Điều Không Hoàn Hảo</p>
+                    <div class="d-flex align-items-center prod-rating" style="gap: 3px;">
+                      <div class="d-flex align-items-center" style="gap: 2px;">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="d-flex align-items-center" style="gap: 3px;">
+                        <span class="fs-12px text-ebebf0"> | </span>
+                        <span class="fs-10px text-808089">Đã bán 5k+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-container">
+                    <div class="d-flex align-items-center gap-2">
+                      <p class="fs-16px fw-medium position-relative">107.000<span class="superscript fw-medium">đ</span></p>
+                      <div class="d-flex align-items-center justify-content-center bg-f5f5fa fs-12px text-27272a fw-medium rounded-pill position-relative" style="height: 18px; padding: 0 4px;">-23%</div>
+                    </div>                
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <div class="delivery-info d-flex align-items-center">
+                      <p class="fs-12px fw-normal text-808089">Giao thứ 4, 31/01</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trang sản phẩm -->
+        <div class="page-container d-flex justify-content-center">
+          <div class="page-number d-flex justify-content-between align-items-center">
+            <ul class="d-flex justify-content-between gap-3">
+              <li><a href="" class="text-decoration-none text-white bg-primary d-flex align-items-center justify-content-center rounded">1</a></li>
+              <li><a href="" class="text-decoration-none text-808089 d-flex align-items-center justify-content-center rounded">2</a></li>
+              <li><a href="" class="text-decoration-none text-808089 d-flex align-items-center justify-content-center rounded">3</a></li>
+              <li><a href="" class="text-decoration-none text-808089 d-flex align-items-center justify-content-center rounded">4</a></li>
+              <li><a href="" class="text-decoration-none text-808089 d-flex align-items-center justify-content-center rounded">5</a></li>
+              <li><a href="" class="text-decoration-none text-808089 d-flex align-items-center justify-content-center rounded">...</a></li>
+              <li><a href="" class="text-decoration-none text-808089 d-flex align-items-center justify-content-center rounded">50</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="d-flex bg-white flex-column">
+    <ul class="d-flex justify-content-between">
+      <!-- Hỗ trợ khách hàng -->
+      <li class="d-flex flex-column" style="gap: 10px;">
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 3px;">Hỗ trợ khách hàng</h3>
+        <p class="fs-12px text-808089">Hotline: <a class="text-decoration-none  text-38383d fw-medium" href="">1900-6035</a><br/>(1000 đ/phút, 8-21h kể cả T7, CN)</p>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Các câu hỏi thường gặp</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Gửi yêu cầu hỗ trợ</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Hướng dẫn đặt hàng</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Phương thức vận chuyển</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Chính sách đổi trả</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Hướng dẫn trả góp</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Chính sách hàng nhập khẩu</a>
+        <p class="fs-12px text-808089">Hỗ trợ khách hàng: <a href="" class="text-decoration-none text-808089">hotro@tiki.vn</a></p>
+        <p class="fs-12px text-808089">Báo lỗi bảo mật: <a href="" class="text-decoration-none text-808089">security@tiki.vn</a></p>
+      </li>
+      <!-- Về Tiki -->
+      <li class="d-flex flex-column" style="gap: 8px;">
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 5px;">Về Tiki</h3>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Giới thiệu Tiki</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Tiki Blog</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Tuyển dụng</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Chính sách bảo mật thanh toán</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Chính sách bảo mật thông tin cá nhân</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Chính sách giải quyết khiếu nại</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Điều khoản sử dụng</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Giới thiệu Tiki Xu</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Gói hội viên VIP</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Tiếp thị liên kết cùng Tiki</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Bán hàng doanh nghiệp</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Điều kiện vận chuyển</a>
+      </li>
+      <!-- Hợp tác liên kết và chứng nhận -->
+      <li class="d-flex flex-column" style="gap: 8px;">
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 5px;">Hợp tác và liên kết</h3>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Quy chế hoạt động Sàn GDTMĐT</a>
+        <a href="" class=" text-decoration-none fs-12px text-808089">Bán hàng cùng Tiki</a>
+        <div class="certificate" style="padding-top: 16px;">
+          <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 5px;">Chứng nhận bởi</h3>
+          <a class="text-decoration-none d-flex justify-content-center" href="http://online.gov.vn/Home/WebDetails/21193?AspxAutoDetectCookieSupport=1" target="_blank">
+            <img src="https://frontend.tikicdn.com/_desktop-next/static/img/footer/bo-cong-thuong.svg" alt="">
+          </a>
+        </div>
+      </li>
+      <!-- PTTT & Dịch vụ giao hàng -->
+      <li class="d-flex flex-column" style="gap: 24px;">
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 5px;">Phương thức thanh toán</h3>
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 5px;">Dịch vụ giao hàng</h3>
+      </li>
+      <!-- Liên hệ -->
+      <li class="d-flex flex-column" style="gap: 12px;">
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-bottom: 5px;">Kết nối với chúng tôi</h3>
+        <div class="icon-contact">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/" class="text-decoration-none" target="_blank">
+            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 16.6665C0 7.82995 7.16344 0.666504 16 0.666504C24.8366 0.666504 32 7.82995 32 16.6665C32 25.5031 24.8366 32.6665 16 32.6665C7.16344 32.6665 0 25.5031 0 16.6665Z" fill="#3B5998"></path><path d="M17.6676 26.0742V17.3693H20.0706L20.389 14.3696H17.6676L17.6717 12.8682C17.6717 12.0858 17.7461 11.6666 18.8698 11.6666H20.372V8.6665H17.9687C15.082 8.6665 14.066 10.1217 14.066 12.5689V14.3699H12.2666V17.3696H14.066V26.0742H17.6676Z" fill="white"></path>
+          </svg></a>
+          
+          <!-- Youtube -->
+          <a href="https://www.youtube.com/" class="text-decoration-none" target="_blank">
+            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 16.6665C0 7.82995 7.16344 0.666504 16 0.666504C24.8366 0.666504 32 7.82995 32 16.6665C32 25.5031 24.8366 32.6665 16 32.6665C7.16344 32.6665 0 25.5031 0 16.6665Z" fill="#FF0000"></path><path d="M24.1768 12.7153C23.9805 11.9613 23.4022 11.3675 22.6679 11.166C21.3371 10.7998 16.0001 10.7998 16.0001 10.7998C16.0001 10.7998 10.6632 10.7998 9.3323 11.166C8.59795 11.3675 8.01962 11.9613 7.82335 12.7153C7.4668 14.0818 7.4668 16.9331 7.4668 16.9331C7.4668 16.9331 7.4668 19.7843 7.82335 21.151C8.01962 21.905 8.59795 22.4987 9.3323 22.7003C10.6632 23.0665 16.0001 23.0665 16.0001 23.0665C16.0001 23.0665 21.3371 23.0665 22.6679 22.7003C23.4022 22.4987 23.9805 21.905 24.1768 21.151C24.5335 19.7843 24.5335 16.9331 24.5335 16.9331C24.5335 16.9331 24.5335 14.0818 24.1768 12.7153Z" fill="white"></path><path d="M14.3999 19.8665V14.5332L18.6666 17.2L14.3999 19.8665Z" fill="#FF0000"></path>
+            </svg>
+          </a>
+          
+          <!-- Zalo -->
+          <a href="https://zalo.me/589673439383195103" class="text-decoration-none" target="_blank">
+            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 16.6665C0 7.82995 7.16344 0.666504 16 0.666504C24.8366 0.666504 32 7.82995 32 16.6665C32 25.5031 24.8366 32.6665 16 32.6665C7.16344 32.6665 0 25.5031 0 16.6665Z" fill="#3171F6"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.0002 5.99984C10.1091 5.99984 5.3335 10.4556 5.3335 15.9522C5.3335 19.0351 6.83597 21.7903 9.19473 23.6158V27.3332L12.8261 25.4565C13.8287 25.7477 14.8948 25.9046 16.0002 25.9046C21.8912 25.9046 26.6668 21.4488 26.6668 15.9522C26.6668 10.4556 21.8912 5.99984 16.0002 5.99984ZM9.87701 18.0804C10.6612 18.0804 11.3932 18.0759 12.125 18.0821C12.5362 18.0856 12.7584 18.2607 12.7962 18.5845C12.8442 18.9944 12.605 19.2664 12.1609 19.2714C11.3233 19.2809 10.4855 19.275 9.64768 19.275C9.40587 19.275 9.16349 19.2835 8.92244 19.2696C8.62187 19.2523 8.32787 19.1928 8.18415 18.8827C8.04006 18.5719 8.14015 18.293 8.33911 18.04C9.13968 17.0219 9.9412 16.0047 10.7422 14.9869C10.7898 14.9265 10.8357 14.8648 10.882 14.8043C10.833 14.7159 10.7554 14.7555 10.6949 14.7551C10.1336 14.7516 9.57215 14.7556 9.01082 14.7511C8.88254 14.7501 8.75044 14.7398 8.62701 14.7074C8.36663 14.6391 8.20854 14.4307 8.20644 14.182C8.20434 13.9329 8.35768 13.722 8.61749 13.6487C8.74025 13.6141 8.87282 13.6021 9.00111 13.6016C9.9252 13.5978 10.8493 13.5981 11.7734 13.6011C11.9367 13.6016 12.1011 13.6058 12.2597 13.6606C12.6101 13.7815 12.7643 14.1045 12.6219 14.4465C12.4978 14.7442 12.3001 14.9973 12.1027 15.2486C11.4252 16.1108 10.7452 16.9709 10.0663 17.8322C10.0136 17.899 9.96292 17.9676 9.87701 18.0804ZM14.0567 17.2472C14.0617 17.4255 14.1205 17.6652 14.2747 17.8732C14.6102 18.3257 15.2984 18.3243 15.6337 17.8723C15.9242 17.4805 15.9227 16.8304 15.6319 16.4389C15.4782 16.2321 15.273 16.1238 15.0169 16.1087C14.4487 16.0753 14.0509 16.5148 14.0567 17.2472ZM15.8889 15.3525C16.0151 15.1936 16.1404 15.0439 16.3538 15.0005C16.7609 14.9174 17.147 15.182 17.1525 15.596C17.1661 16.6319 17.161 17.668 17.1549 18.7041C17.1532 18.987 16.9789 19.2039 16.7239 19.2906C16.4567 19.3814 16.1783 19.3152 15.9998 19.09C15.9124 18.9797 15.875 18.9607 15.7531 19.0596C15.2812 19.4422 14.7489 19.5091 14.1735 19.3225C13.2505 19.023 12.8705 18.3038 12.7703 17.4228C12.6626 16.4766 12.9776 15.6645 13.8246 15.1666C14.5277 14.7532 15.2421 14.788 15.8889 15.3525ZM20.7838 17.1508C20.7824 17.416 20.8448 17.6634 21.0047 17.8783C21.3324 18.3189 22.0136 18.3224 22.348 17.8879C22.6494 17.4962 22.6504 16.8305 22.353 16.4346C22.1979 16.2282 21.9918 16.1217 21.7364 16.1082C21.1766 16.0785 20.7862 16.5065 20.7838 17.1508ZM19.4806 17.276C19.4411 15.9452 20.3142 14.9509 21.556 14.9127C22.8756 14.8721 23.8436 15.7594 23.883 17.0529C23.9229 18.3626 23.1194 19.2917 21.8803 19.416C20.5341 19.5509 19.4614 18.57 19.4806 17.276ZM19.0266 16.2455C19.0266 17.0484 19.0306 17.8513 19.025 18.6542C19.0218 19.1134 18.6166 19.4239 18.1809 19.3139C17.9192 19.2479 17.7236 18.9703 17.7231 18.6468C17.7211 17.2741 17.7223 15.9014 17.7223 14.5287C17.7223 14.287 17.7189 14.0451 17.7231 13.8035C17.7301 13.4051 17.9837 13.1465 18.3649 13.1428C18.7586 13.1389 19.0226 13.3985 19.0252 13.811C19.0302 14.6225 19.0266 15.434 19.0266 16.2455Z" fill="white">
+              </path>
+            </svg>
+          </a>
+          
+        </div>
+        <h3 class="fs-16px fw-medium text-38383d" style="padding-top: 19px;">Kết nối với chúng tôi</h3>
+      </li>
+    </ul>
+    <div class="d-flex flex-column company-des" >
+      <h3 class="fs-16px fw-medium text-38383d">Công ty TNHH TIKI</h3>
+      <div class="d-flex flex-column gap-2 ">
+        <p class="fs-12px text-808089">Địa chỉ trụ sở: Tòa nhà Viettel, Số 285, Đường Cách Mạng Tháng 8, Phường 12, Quận 10, Thành phố Hồ Chí Minh</p>
+        <p class="fs-12px text-808089">Giấy chứng nhận đăng ký doanh nghiệp số 0309532909 do Sở Kế Hoạch và Đầu Tư Thành phố Hồ Chí Minh cấp lần đầu vào ngày 06/01/2010.</p>
+        <p class="fs-12px text-808089">Hotline: <span><a href="" class="text-decoration-none fs-12px text-primary">1900 6035</a></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
